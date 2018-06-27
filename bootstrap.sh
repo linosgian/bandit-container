@@ -6,4 +6,4 @@ git clone "$1" "/repo"
 shift
 
 # Pass all other arguments to bandit
-bandit -r "/repo" $@
+! bandit -r "/repo" $@ # Invert exit code because bandit returns 1 upon success
